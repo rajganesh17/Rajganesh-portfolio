@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-acorn: "Acorn", "Georgia", serif;
+  --font-nata-sans: "Nata Sans", "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #1b1e27;
+  text-decoration: none;
+}
+
+::selection {
+  background: #1b1e27;
+  color: #f4f3f1;
+}
