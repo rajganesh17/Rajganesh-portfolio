@@ -12,9 +12,6 @@ export default function Capabilities() {
     <section id="capabilities" className="pt-2 pb-12">
       {/* Section heading */}
       <div className="mb-8 max-w-[760px]">
-        <span className="mb-4 inline-block rounded-full border border-line-soft bg-white px-4 py-1.5 text-[13px] font-semibold text-body">
-          Case study · Givingli
-        </span>
         <h2 className="m-0 font-display text-[clamp(32px,4.5vw,56px)] font-medium leading-[1.03] tracking-[-0.02em] text-ink">
           Turning a forgotten text into a{" "}
           <span className="text-blue">moment worth keeping</span>
@@ -34,69 +31,68 @@ export default function Capabilities() {
             style={{ background: SHEEN }}
           />
           <h3 className="relative m-0 font-display text-[40px] font-medium leading-none text-body">
-            Customization
+            Extraction
           </h3>
 
-          {/* Mock template cards */}
+          {/* Layered document + JSON output */}
           <div className="relative mt-8 flex flex-1 items-center justify-center">
-            {/* Photo / "Happy Birthday" card */}
+            {/* Source document — front card, left */}
             <div
-              className="relative z-[2] h-[260px] w-[168px] flex-none rounded-[16px] bg-white p-3 shadow-[0_16px_40px_-14px_rgba(16,24,40,0.28)]"
-              style={{ transform: "rotate(-4deg)" }}
+              className="relative z-[2] w-[176px] flex-none rounded-[16px] bg-white p-4 shadow-[0_18px_44px_-16px_rgba(16,24,40,0.3)]"
+              style={{ transform: "rotate(-5deg)" }}
             >
-              <div className="h-[80px] w-full rounded-[10px] bg-[#E7E2D8]" />
-              <div className="mt-3 font-display text-[17px] font-semibold leading-tight text-ink">
-                Happy
-                <br />
-                Birthday
-              </div>
+              <div className="h-5 w-2/5 rounded-[5px] border border-[#F1A9A9] bg-[#FDECEC]" />
               <div className="mt-3 space-y-1.5">
-                <div className="h-1.5 w-full rounded-full bg-[#EAE6DE]" />
-                <div className="h-1.5 w-11/12 rounded-full bg-[#EAE6DE]" />
-                <div className="h-1.5 w-3/4 rounded-full bg-[#EAE6DE]" />
+                <div className="h-1.5 w-4/5 rounded-full bg-[#EAE7F0]" />
+                <div className="h-1.5 w-3/5 rounded-full bg-[#EAE7F0]" />
               </div>
-              <div className="mt-4 flex justify-center gap-1.5 text-[12px]">
-                <span>✦</span>
-                <span>✦</span>
-                <span>✦</span>
+              <div className="mt-3 ml-auto h-5 w-1/2 rounded-[5px] border border-[#A9C0F4] bg-[#EEF3FE]" />
+              <div className="mt-3 space-y-1.5">
+                <div className="h-1.5 w-2/5 rounded-full bg-[#EAE7F0]" />
+                <div className="h-1.5 w-3/5 rounded-full bg-[#EAE7F0]" />
               </div>
+              <div className="mt-3 h-5 w-1/2 rounded-[5px] border border-[#A9D9C0] bg-[#EAF6F0]" />
+              <div className="mt-3 h-5 w-1/2 rounded-[5px] border border-[#F0D6A0] bg-[#FBF3E3]" />
             </div>
 
-            {/* Cartoon cake card */}
-            <div
-              className="relative z-[1] -ml-6 grid h-[290px] w-[186px] flex-none place-items-center rounded-[16px] text-[64px] shadow-[0_18px_44px_-14px_rgba(16,24,40,0.3)]"
-              style={{
-                transform: "rotate(5deg)",
-                background:
-                  "linear-gradient(150deg,#C4BAFF 0%,#A9A0F5 100%)",
-              }}
-            >
-              🧁
+            {/* JSON panel — back card, right, peeking */}
+            <div className="relative z-[1] -ml-14 w-[272px] flex-none overflow-hidden rounded-[16px] bg-[#0E1117] shadow-[0_26px_54px_-18px_rgba(16,24,40,0.6)]">
+              <div className="flex items-center gap-2 border-b border-white/10 px-3.5 py-2.5">
+                <span className="flex gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-[#FF5F56]" />
+                  <span className="h-2 w-2 rounded-full bg-[#FFBD2E]" />
+                  <span className="h-2 w-2 rounded-full bg-[#27C93F]" />
+                </span>
+                <span className="truncate font-mono text-[9.5px] text-white/55">
+                  converted-json-with-bboxes.json
+                </span>
+              </div>
+              <div className="whitespace-pre px-3.5 py-3 font-mono text-[10.5px] leading-[1.65] text-[#8B949E]">
+                <div>{"{"}</div>
+                <div>{"  "}<span className="text-[#79C0FF]">"label"</span>{": "}<span className="text-[#7EE787]">"Total amount"</span>{","}</div>
+                <div>{"  "}<span className="text-[#79C0FF]">"value"</span>{": "}<span className="text-[#7EE787]">"$12,480.00"</span>{","}</div>
+                <div>{"  "}<span className="text-[#79C0FF]">"bbox"</span>{": {"}</div>
+                <div>{"    "}<span className="text-[#79C0FF]">"page"</span>{": "}<span className="text-[#FFA657]">1</span>{","}</div>
+                <div>{"    "}<span className="text-[#79C0FF]">"x1"</span>{": "}<span className="text-[#FFA657]">412</span>{", "}<span className="text-[#79C0FF]">"y1"</span>{": "}<span className="text-[#FFA657]">286</span>{","}</div>
+                <div>{"    "}<span className="text-[#79C0FF]">"x2"</span>{": "}<span className="text-[#FFA657]">548</span>{", "}<span className="text-[#79C0FF]">"y2"</span>{": "}<span className="text-[#FFA657]">308</span></div>
+                <div>{"}}"}</div>
+              </div>
             </div>
           </div>
 
-          {/* Editor toolbar pill */}
-          <div className="relative -mt-2 mb-8 flex items-center justify-around gap-1 self-center rounded-[18px] bg-white px-4 py-3 text-center shadow-[0_10px_28px_-12px_rgba(16,24,40,0.28)]">
-            {[
-              { i: "🧩", l: "Templates" },
-              { i: "🅣", l: "Text" },
-              { i: "⭐", l: "Stickers" },
-              { i: "📷", l: "Video" },
-              { i: "🖼️", l: "Photos" },
-              { i: "✓", l: "Paint" },
-            ].map((t) => (
-              <div key={t.l} className="flex flex-col items-center gap-1 px-1">
-                <span className="text-[18px] leading-none">{t.i}</span>
-                <span className="text-[9px] font-medium text-[#8A8A8A]">
-                  {t.l}
-                </span>
-              </div>
-            ))}
+          {/* Export actions pill */}
+          <div className="relative -mt-2 mb-8 flex items-center justify-center gap-2.5 self-center rounded-[18px] bg-white px-3 py-2.5 shadow-[0_10px_28px_-12px_rgba(16,24,40,0.28)]">
+            <span className="rounded-full bg-ink px-4 py-2 text-[12px] font-semibold text-white">
+              Copy JSON
+            </span>
+            <span className="rounded-full border border-body/15 px-4 py-2 text-[12px] font-semibold text-body">
+              Download JSON
+            </span>
           </div>
 
           <p className="relative m-0 max-w-[360px] text-[19px] font-medium leading-[1.4] text-body">
-            Use a pre-designed template or personalize with video, stickers,
-            fonts, and more
+            Every extracted value returns as JSON with its source page and
+            coordinates
           </p>
         </article>
 
@@ -109,7 +105,7 @@ export default function Capabilities() {
             className="pointer-events-none absolute inset-0"
             style={{ background: SHEEN }}
           />
-          <div className="relative max-w-[300px]">
+          <div className="relative max-w-[300px] lg:max-w-[210px]">
             <h3 className="m-0 font-display text-[38px] font-medium leading-none text-body">
               Scheduling
             </h3>
@@ -119,43 +115,12 @@ export default function Capabilities() {
             </p>
           </div>
 
-          {/* Birthday card + date picker */}
-          <div className="pointer-events-none absolute right-8 top-1/2 hidden -translate-y-1/2 items-start gap-0 lg:flex">
-            <div
-              className="grid h-[190px] w-[130px] place-items-center rounded-[14px] text-[52px] shadow-[0_16px_36px_-14px_rgba(16,24,40,0.32)]"
-              style={{
-                transform: "rotate(-6deg)",
-                background: "linear-gradient(150deg,#F6C39A 0%,#EBA9C6 100%)",
-              }}
-            >
-              🎂
-            </div>
-            <div
-              className="-ml-6 w-[210px] rounded-[18px] bg-white p-4 shadow-[0_20px_44px_-14px_rgba(16,24,40,0.3)]"
-              style={{ transform: "rotate(2deg)" }}
-            >
-              <div className="mb-2 text-[11px] font-semibold text-[#8A8A8A]">
-                When should we deliver this card?
-              </div>
-              <div className="space-y-1 text-[12px] font-medium text-[#C4C4C4]">
-                <div className="flex justify-between">
-                  <span>August</span>
-                  <span>3:00 AM</span>
-                </div>
-                <div className="flex justify-between rounded-[8px] bg-[#F1F1F1] px-2 py-1 text-ink">
-                  <span className="font-bold">September</span>
-                  <span className="font-bold">5:00 AM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>October</span>
-                  <span>7:00 AM</span>
-                </div>
-              </div>
-              <div className="mt-3 rounded-full bg-ink py-2 text-center text-[12px] font-semibold text-white">
-                Set Date
-              </div>
-            </div>
-          </div>
+          {/* Onboarding scheduling mock (image we created) */}
+          <img
+            src="/images/scheduling-onboarding.png"
+            alt="Scheduling — pick a delivery date"
+            className="pointer-events-none absolute right-2 top-1/2 hidden h-[90%] w-auto max-w-[62%] -translate-y-1/2 select-none object-contain object-right lg:block"
+          />
         </article>
 
         {/* Wallet — bottom-left of right column */}
@@ -167,25 +132,30 @@ export default function Capabilities() {
             className="pointer-events-none absolute inset-0"
             style={{ background: SHEEN }}
           />
-          {/* Stacked wallet cards + Givingli Cash card */}
+          {/* Stacked cards + Memos stat card */}
           <div className="relative mt-1">
             <div
               className="absolute -top-3 left-4 h-8 w-[85%] rounded-t-[12px]"
               style={{
                 transform: "rotate(-3deg)",
-                background: "linear-gradient(120deg,#F6C39A 0%,#EBA9C6 100%)",
+                background: "linear-gradient(120deg,#ABDAF1 0%,#C9C5F3 100%)",
               }}
             />
             <div className="relative w-full rounded-[14px] bg-ink px-4 py-4 shadow-[0_16px_34px_-14px_rgba(16,24,40,0.4)]">
               <div className="text-[11px] font-medium text-white/70">
-                Givingli Cash
+                Memos Created
               </div>
-              <div className="mt-2 flex items-baseline justify-between">
-                <span className="font-display text-[26px] font-medium text-white">
-                  $132.00
-                </span>
-                <span className="rounded-full bg-white/15 px-2.5 py-1 text-[9px] font-semibold tracking-wide text-white">
-                  REDEEM
+              <div className="mt-2 flex items-center justify-between">
+                <div>
+                  <div className="font-display text-[26px] font-medium leading-none text-white">
+                    24
+                  </div>
+                  <div className="mt-1.5 text-[11px] font-medium text-white/60">
+                    This month
+                  </div>
+                </div>
+                <span className="rounded-full bg-white/15 px-3 py-1.5 text-[9px] font-semibold tracking-wide text-white">
+                  VIEW ALL
                 </span>
               </div>
             </div>
@@ -211,36 +181,79 @@ export default function Capabilities() {
             style={{ background: SHEEN }}
           />
           <h3 className="relative m-0 font-display text-[30px] font-medium leading-none text-body">
-            Inbox
+            Ask anything
           </h3>
-          <p className="relative mt-3 max-w-[220px] text-[15px] font-medium leading-[1.4] text-body">
-            Track your gifts, group chats, and sent cards
+          <p className="relative mt-1.5 max-w-[240px] text-[13px] font-medium leading-[1.3] text-body">
+            Chat with your documents and get answers with sources
           </p>
 
-          {/* Inbox rows */}
-          <div className="relative mt-auto space-y-2 pt-5">
-            {[
-              { i: "🎉", t: "Bea, Yannick, Avi", s: "Picnic Party 🌿 · Apr 26" },
-              { i: "🌹", t: "Kyle Patterson", s: "I appreciate you 💛 · Apr 25" },
-              { i: "PB", t: "Damian Martins", s: "Happy belated bday! · Apr 25" },
-            ].map((row) => (
-              <div
-                key={row.t}
-                className="flex items-center gap-2.5 rounded-[12px] bg-white/75 px-2.5 py-2 shadow-[0_4px_12px_-6px_rgba(16,24,40,0.25)]"
-              >
-                <span className="grid h-8 w-8 flex-none place-items-center rounded-full bg-white text-[13px] font-semibold text-body">
-                  {row.i}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <div className="truncate text-[12px] font-semibold text-body">
-                    {row.t}
-                  </div>
-                  <div className="truncate text-[10px] font-medium text-muted">
-                    {row.s}
-                  </div>
+          {/* Document chat */}
+          <div className="relative mt-auto pt-2">
+            {/* User question */}
+            <div className="ml-auto max-w-[85%] rounded-[12px] rounded-tr-[4px] bg-white/60 px-3 py-1 shadow-[0_4px_12px_-6px_rgba(16,24,40,0.2)]">
+              <div className="text-[10.5px] font-medium leading-[1.3] text-body">
+                What are the key risk factors in Apple&rsquo;s latest 10-K report?
+              </div>
+            </div>
+
+            {/* AI answer */}
+            <div className="mt-1.5 flex items-start gap-2">
+              <span className="mt-0.5 grid h-5 w-5 flex-none place-items-center rounded-full bg-[#E7E5FF] text-[11px] text-[#6C5CE7]">
+                ✦
+              </span>
+              <div className="min-w-0 flex-1 rounded-[12px] rounded-tl-[4px] bg-white/85 px-3 py-1.5 shadow-[0_4px_12px_-6px_rgba(16,24,40,0.25)]">
+                <div className="text-[10.5px] font-medium leading-[1.3] text-body">
+                  Key risk factors from Apple&rsquo;s latest 10-K:
+                </div>
+                <ul className="mt-1 space-y-0.5 text-[10px] leading-[1.25] text-body/80">
+                  <li>• Heavy reliance on iPhone for most net sales</li>
+                  <li>• Intense competition &amp; rapid product transitions</li>
+                  <li>• Supply chain concentrated in China &amp; Asia</li>
+                </ul>
+                <div className="mt-1.5 border-t border-body/10 pt-1 text-[9px] font-medium text-muted">
+                  Sources: AAPL 10-K Report 2025 · Page 15–17
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Input */}
+            <div className="mt-2 rounded-[12px] border border-body/15 bg-white/85 px-3 py-1.5 shadow-[0_4px_12px_-6px_rgba(16,24,40,0.2)]">
+              <div className="flex items-center gap-1.5">
+                <span className="flex items-center gap-1 text-[10.5px] font-semibold text-body">
+                  10-K
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </span>
+                <span className="truncate text-[10.5px] font-medium text-muted">
+                  Enter your question here…
+                </span>
+              </div>
+              <div className="mt-1.5 flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[10.5px] font-semibold text-body">
+                  AAPL
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="flex items-center gap-1 text-[10px] font-medium text-muted">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="M7 9l2.5 3L7 15" />
+                      <path d="M13 15h4" />
+                    </svg>
+                    Prompts
+                  </span>
+                  <span className="grid h-5 w-6 flex-none place-items-center rounded-[6px] bg-body/10">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="text-body/45">
+                      <path d="M5 12h13" />
+                      <path d="M12 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </article>
       </div>
