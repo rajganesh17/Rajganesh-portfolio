@@ -1,29 +1,29 @@
-import Image from "next/image";
-import aboutCollage from "@/public/images/about-collage.svg";
+import { readFileSync } from "fs";
+import path from "path";
+
+// The collage ships as an element-wrapped, size-optimised SVG. It is inlined
+// (not an <img>) so each piece's `.cpop:hover` pop can run — an <img> renders
+// the SVG but gives its inner nodes no interactivity.
+const collageSvg = readFileSync(
+  path.join(process.cwd(), "public/images/about-collage.opt.svg"),
+  "utf8"
+);
 
 export default function About() {
   return (
-    <section id="about" className="pt-0 pb-11 overflow-hidden">
+    <section id="about" className="pt-0 pb-11">
       <div
-        className="relative w-full overflow-hidden"
-        style={{
-          aspectRatio: "1230 / 650",
-          containerType: "inline-size",
-          marginLeft: "16px",
-        }}
+        className="relative w-full"
+        style={{ aspectRatio: "1230 / 650", containerType: "inline-size", marginLeft: "16px" }}
       >
-        <Image
-          src={aboutCollage}
-          alt="Desk collage: plant, coffee, notes, a terminal window, a playlist card, and a philosophy board"
-          fill
-          className="object-contain"
-          unoptimized
-          priority
+        <div
+          className="absolute inset-0 [&>svg]:block [&>svg]:h-full [&>svg]:w-full [&_svg]:overflow-visible"
+          dangerouslySetInnerHTML={{ __html: collageSvg }}
         />
 
         {/* Corrected headline typo ("I THINK, THEN I BULD" in the source asset) */}
         <div
-          className="absolute flex items-center justify-center"
+          className="pointer-events-none absolute flex items-center justify-center"
           style={{ left: "34.6%", top: "45.0%", width: "33.2%", height: "8.0%", background: "#F4F3F1" }}
         >
           <span

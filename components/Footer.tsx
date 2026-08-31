@@ -5,7 +5,7 @@ const RESUME = "/resume.pdf"; // drop your resume in /public as resume.pdf
 // Full-colour Gmail mark.
 function GmailIcon() {
   return (
-    <svg width="72" height="54" viewBox="0 0 256 193" preserveAspectRatio="xMidYMid" aria-hidden="true">
+    <svg width="88" height="66" viewBox="0 0 256 193" preserveAspectRatio="xMidYMid" aria-hidden="true">
       <path d="M58.182 192.05V93.14L27.507 65.077 0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z" fill="#4285F4" />
       <path d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837-27.026 25.798z" fill="#34A853" />
       <path d="M58.182 93.14l-4.174-38.647 4.174-36.989L128 69.868l69.818-52.364 4.669 34.992-4.669 40.644L128 145.504z" fill="#EA4335" />
@@ -18,7 +18,7 @@ function GmailIcon() {
 // Full-colour LinkedIn mark.
 function LinkedInIcon() {
   return (
-    <svg width="62" height="62" viewBox="0 0 24 24" aria-hidden="true">
+    <svg width="76" height="76" viewBox="0 0 24 24" aria-hidden="true">
       <rect width="24" height="24" rx="4.2" fill="#0A66C2" />
       <path
         fill="#FFFFFF"
@@ -28,11 +28,19 @@ function LinkedInIcon() {
   );
 }
 
+// Resume mark — a filled document in warm yellow, so the deck reads as three
+// coloured brand marks rather than two colours plus an outline.
 function DocumentIcon() {
   return (
-    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#1B1E27" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <path d="M14 2v6h6M9 13h6M9 17h6" />
+    <svg width="90" height="90" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M13.5 2H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8.5z" fill="#FBBC04" />
+      <path d="M13.5 2 20 8.5h-4.6a1.9 1.9 0 0 1-1.9-1.9z" fill="#E09B00" />
+      <path
+        d="M8 12.5h8M8 16h5"
+        stroke="#FFFFFF"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -43,7 +51,9 @@ function DocumentIcon() {
 // shadow that composes cleanly with the wrapper's rotation instead of fighting
 // it, so nothing jumps.
 const CARD_WRAP =
-  "group relative w-full max-w-[300px] hover:z-30 sm:h-[356px] sm:w-[262px] sm:max-w-none";
+  "group relative w-full max-w-[300px] transition-[transform,opacity] duration-300 " +
+  "ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-30 group-hover/deck:opacity-40 " +
+  "hover:!opacity-100 sm:h-[356px] sm:w-[262px] sm:max-w-none sm:hover:rotate-0";
 const CARD_SHELL =
   "flex h-full w-full flex-col rounded-[28px] border border-line-soft bg-white p-7 " +
   "shadow-[0_18px_44px_-32px_rgba(16,24,40,0.28)] transition-[transform,box-shadow] " +
@@ -58,7 +68,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="pb-12 pt-6">
       {/* ── Fanned cards ── */}
-      <div className="flex flex-col items-center gap-5 sm:h-[400px] sm:flex-row sm:items-start sm:justify-center sm:gap-0">
+      <div className="group/deck flex flex-col items-center gap-5 sm:h-[400px] sm:flex-row sm:items-start sm:justify-center sm:gap-0">
         {/* Note */}
         <div className={`${CARD_WRAP} sm:-mr-6 sm:translate-y-[22px] sm:-rotate-[7deg]`}>
           <article className={CARD_SHELL}>
@@ -135,7 +145,7 @@ export default function Footer() {
       {/* ── Email ── */}
       <a
         href={`mailto:${EMAIL}`}
-        className="mt-4 block break-all text-center font-sans text-[clamp(30px,8vw,76px)] font-bold leading-none tracking-[-0.03em] text-ink"
+        className="mt-4 block break-all text-center font-sans text-[clamp(28px,7.5vw,72px)] font-bold leading-[1.08] tracking-[-0.005em] text-ink"
       >
         rajganesh6.1<span className="text-blue">@gmail.com</span>
       </a>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { label: "Home", href: "#top" },
@@ -9,8 +9,44 @@ const NAV_LINKS = [
   { label: "Contact", href: "#contact" },
 ];
 
+const ACTIVE_INDEX = 0; // Home is the active/resting item
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  // sliding pill state
+  const navRef = useRef<HTMLElement>(null);
+  const linkRefs = useRef<Array<HTMLAnchorElement | null>>([]);
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [pill, setPill] = useState({ left: 0, width: 0 });
+
+  const target = hovered ?? ACTIVE_INDEX;
+  const ready = pill.width > 0;
+  const onActive = ready && target === ACTIVE_INDEX;
+
+  useEffect(() => {
+    const measure = () => {
+      const el = linkRefs.current[target];
+      if (el) {
+        setPill({ left: el.offsetLeft, width: el.offsetWidth });
+      }
+    };
+    measure();
+
+    // Re-measure whenever layout can shift (font swap, resize, container size).
+    const ro = new ResizeObserver(measure);
+    if (navRef.current) ro.observe(navRef.current);
+    linkRefs.current.forEach((el) => el && ro.observe(el));
+    window.addEventListener("resize", measure);
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      document.fonts.ready.then(measure).catch(() => {});
+    }
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [target]);
 
   return (
     <header className="sticky top-0 z-50 py-[22px]">
@@ -25,18 +61,44 @@ export default function Navbar() {
         </a>
 
         {/* Center: pill nav (desktop) */}
-        <nav className="hidden items-center gap-0.5 rounded-full bg-white/90 p-1.5 shadow-[0_8px_24px_0_rgba(16,24,40,0.10)] backdrop-blur-sm lg:flex lg:justify-self-center">
-          {NAV_LINKS.map((item) => {
-            const isHome = item.label === "Home";
+        <nav
+          ref={navRef}
+          onMouseLeave={() => setHovered(null)}
+          className="relative hidden items-center gap-0.5 rounded-full bg-white/90 p-2 shadow-[0_8px_24px_0_rgba(16,24,40,0.10)] backdrop-blur-sm lg:flex lg:justify-self-center"
+        >
+          {/* sliding highlight pill */}
+          <span
+            aria-hidden
+            className={`pointer-events-none absolute inset-y-2 rounded-full transition-all duration-[420ms] ease-[cubic-bezier(0.34,1.2,0.5,1)] ${
+              ready ? "opacity-100" : "opacity-0"
+            } ${
+              onActive
+                ? "bg-blue shadow-[0_6px_18px_-6px_rgba(62,111,168,0.5)]"
+                : "bg-[#DCE7F4] shadow-[0_8px_16px_-10px_rgba(62,111,168,0.45)]"
+            }`}
+            style={{ left: pill.left, width: pill.width }}
+          />
+
+          {NAV_LINKS.map((item, i) => {
+            const isActive = i === ACTIVE_INDEX;
+            const color = isActive
+              ? onActive
+                ? "text-white"
+                : "text-ink"
+              : ready && hovered === i
+                ? "text-[#2F5D8A]"
+                : "text-body";
             return (
               <a
                 key={item.label}
+                ref={(el) => {
+                  linkRefs.current[i] = el;
+                }}
                 href={item.href}
-                className={
-                  isHome
-                    ? "rounded-full px-5 py-[9px] text-[15px] font-semibold text-white bg-blue shadow-[0_6px_18px_-6px_rgba(62,111,168,0.5)]"
-                    : "rounded-full px-[18px] py-[9px] text-[15px] font-medium text-body transition-colors hover:bg-[#EAE8E4] hover:text-ink"
-                }
+                onMouseEnter={() => setHovered(i)}
+                className={`relative z-10 rounded-full px-5 py-[5px] text-[15px] transition-colors ${
+                  isActive ? "font-semibold" : "font-medium"
+                } ${color}`}
               >
                 {item.label}
               </a>
@@ -99,7 +161,7 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-2.5 text-[15px] font-medium text-body hover:bg-[#EAE8E4] hover:text-ink"
+                className="rounded-xl px-4 py-2.5 text-[15px] font-medium text-body hover:bg-[#DCE7F4] hover:text-[#2F5D8A]"
               >
                 {item.label}
               </a>

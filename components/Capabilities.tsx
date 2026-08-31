@@ -23,7 +23,7 @@ export default function Capabilities() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-2">
         {/* Customization — tall card, left */}
         <article
-          className="relative flex min-h-[560px] flex-col overflow-hidden rounded-[32px] p-9 md:col-span-5 md:row-span-2"
+          className="group/cap relative flex min-h-[560px] flex-col overflow-hidden rounded-[32px] p-9 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-5 md:row-span-2"
           style={{ background: LAVENDER }}
         >
           <div
@@ -98,7 +98,7 @@ export default function Capabilities() {
 
         {/* Scheduling — wide card, top-right */}
         <article
-          className="relative flex min-h-[280px] flex-col justify-center overflow-hidden rounded-[32px] p-9 md:col-span-7"
+          className="group/cap relative flex min-h-[280px] flex-col justify-center overflow-hidden rounded-[32px] p-9 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-7"
           style={{ background: PEACH }}
         >
           <div
@@ -125,7 +125,7 @@ export default function Capabilities() {
 
         {/* Wallet — bottom-left of right column */}
         <article
-          className="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-[32px] p-8 md:col-span-3"
+          className="group/cap relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-[32px] p-8 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-3"
           style={{ background: MINT }}
         >
           <div
@@ -173,7 +173,7 @@ export default function Capabilities() {
 
         {/* Inbox — bottom-right */}
         <article
-          className="relative flex min-h-[260px] flex-col overflow-hidden rounded-[32px] p-8 md:col-span-4"
+          className="group/cap relative flex min-h-[260px] flex-col overflow-hidden rounded-[32px] p-8 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-4"
           style={{ background: BUTTER }}
         >
           <div

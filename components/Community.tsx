@@ -84,9 +84,6 @@ export default function Community() {
     <section id="community" className="pt-2 pb-16">
       {/* Section heading */}
       <div className="mb-8 max-w-[720px]">
-        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-line-soft bg-white px-4 py-1.5 text-[13px] font-semibold text-body">
-          <span className="text-sage">◆</span> Design community
-        </span>
         <h2 className="m-0 font-display text-[clamp(32px,4.5vw,56px)] font-medium leading-[1.03] tracking-[-0.02em] text-ink">
           Out in the <span className="text-blue">design community</span>
         </h2>
@@ -129,7 +126,7 @@ export default function Community() {
         {/* Header row: chips */}
         <div className="relative z-[4] mb-5 flex flex-wrap items-center justify-between gap-3">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[12px] font-semibold text-white ring-1 ring-white/15 backdrop-blur">
-            <span className="text-sage">◆</span> Always learning
+            <span className="text-sage">◆</span> Communities
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-[12px] font-semibold text-ink shadow-[0_12px_26px_-12px_rgba(0,0,0,0.6)]">
             Meetups · Jams · Talks

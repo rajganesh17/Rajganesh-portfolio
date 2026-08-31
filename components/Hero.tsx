@@ -5,8 +5,8 @@ const CARDS = [
   {
     key: "work",
     gradient: "linear-gradient(150deg,#FCEBD6 0%,#F6C39A 52%,#EBA9C6 100%)",
-    rotate: "-5deg",
-    zIndex: 2,
+    rot: "-rotate-[5deg]",
+    z: "z-[2]",
     title: "Recent work",
     body: "See how I turn messy, data-heavy product problems into shipped experiences.",
     cta: "Read case studies",
@@ -18,8 +18,8 @@ const CARDS = [
   {
     key: "about",
     gradient: "linear-gradient(150deg,#EAE3FF 0%,#C4BAFF 50%,#A4C7FF 100%)",
-    rotate: "4deg",
-    zIndex: 3,
+    rot: "rotate-[4deg]",
+    z: "z-[3]",
     title: "About me",
     body: "Product designer and builder shipping AI copilots for finance teams. Founding-designer instincts, 20+ side projects, always learning by building.",
     cta: "More about me",
@@ -28,8 +28,8 @@ const CARDS = [
   {
     key: "contact",
     gradient: "linear-gradient(150deg,#CFF0E2 0%,#ABDAF1 54%,#C9C5F3 100%)",
-    rotate: "-3deg",
-    zIndex: 1,
+    rot: "-rotate-[3deg]",
+    z: "z-[1]",
     title: "Let's talk",
     body: "Open to collaborating, mentoring, or just trading ideas. Tell me what you're building — I'll write back.",
     cta: "Get in touch",
@@ -69,12 +69,12 @@ export default function Hero() {
         </div>
 
         {/* Sticky card row with woven-in portrait */}
-        <div className="relative mt-14 flex flex-wrap items-start justify-center gap-0">
+        <div className="group/deck relative mt-14 flex flex-wrap items-start justify-center gap-0">
           {CARDS.map((card) =>
             card.key === "portrait" ? (
               <div
                 key="portrait"
-                className="relative z-[4] mt-6 h-[360px] w-[210px] flex-none overflow-hidden rounded-[24px] -mx-3.5"
+                className="relative z-[4] mt-6 h-[360px] w-[210px] flex-none overflow-hidden rounded-[24px] -mx-3.5 transition-opacity duration-300 group-hover/deck:opacity-40 hover:!opacity-100"
                 style={{
                   transform: "rotate(-1deg)",
                   boxShadow:
@@ -91,39 +91,39 @@ export default function Hero() {
                 />
               </div>
             ) : (
+              // Wrapper handles stacking and the sibling fade; the inner shell
+              // carries the fan angle and the hover motion, so straightening,
+              // lifting and scaling all compose in one transform.
               <div
                 key={card.key}
-                className="relative -mx-3.5 flex min-h-[360px] max-w-[340px] flex-1 basis-[240px] flex-col justify-between overflow-hidden rounded-[24px] px-[30px] pb-10 pt-8 transition-transform duration-200 hover:-translate-y-1.5"
-                style={{
-                  background: card.gradient,
-                  transform: `rotate(${card.rotate})`,
-                  zIndex: card.zIndex,
-                  boxShadow:
-                    "0 0 0 1px rgba(0,0,0,0.05), 0 4px 16px 0 rgba(16,24,40,0.08)",
-                  marginTop: card.key === "build" ? "-6px" : undefined,
-                }}
+                className={`group/card relative -mx-3.5 flex max-w-[340px] flex-1 basis-[240px] transition-opacity duration-300 hover:z-30 group-hover/deck:opacity-40 hover:!opacity-100 ${card.z}`}
               >
                 <div
-                  className="pointer-events-none absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(131deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%)",
-                  }}
-                />
-                <div className="relative">
-                  <div className="mb-4 font-display text-[40px] font-normal leading-[36px] text-body">
-                    {card.title}
-                  </div>
-                  <p className="m-0 text-[15px] font-medium leading-[1.5] text-body">
-                    {card.body}
-                  </p>
-                </div>
-                <a
-                  href={card.href}
-                  className="relative self-start rounded-lg bg-black px-3.5 py-2.5 text-[13px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),0_1px_2px_rgba(0,0,0,0.12)] transition-colors hover:bg-[#1a1a1a]"
+                  className={`relative flex min-h-[360px] w-full flex-col justify-between overflow-hidden rounded-[24px] px-[30px] pb-10 pt-8 shadow-[0_0_0_1px_rgba(0,0,0,0.05),0_4px_16px_0_rgba(16,24,40,0.08)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform group-hover/card:rotate-0 group-hover/card:-translate-y-[18px] group-hover/card:scale-[1.06] group-hover/card:shadow-[0_0_0_1px_rgba(0,0,0,0.05),0_44px_72px_-34px_rgba(16,24,40,0.45)] ${card.rot}`}
+                  style={{ background: card.gradient }}
                 >
-                  {card.cta}
-                </a>
+                  <div
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(131deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 50%)",
+                    }}
+                  />
+                  <div className="relative">
+                    <div className="mb-4 font-display text-[40px] font-normal leading-[36px] text-body">
+                      {card.title}
+                    </div>
+                    <p className="m-0 text-[15px] font-medium leading-[1.5] text-body">
+                      {card.body}
+                    </p>
+                  </div>
+                  <a
+                    href={card.href}
+                    className="relative self-start rounded-lg bg-black px-3.5 py-2.5 text-[13px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),0_1px_2px_rgba(0,0,0,0.12)] transition-colors hover:bg-[#1a1a1a]"
+                  >
+                    {card.cta}
+                  </a>
+                </div>
               </div>
             )
           )}
