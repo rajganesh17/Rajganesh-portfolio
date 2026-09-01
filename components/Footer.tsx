@@ -160,9 +160,9 @@ export default function Footer() {
       <div className="mt-14 border-t border-line pt-7">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
           <a href="#top" className="flex items-center gap-3 text-[18px] font-semibold tracking-[-0.01em] text-ink">
-            <span className="flex h-[60px] w-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-[#EFEDE9]">
+            <span className="flex h-[60px] w-[60px] shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-[#FFFDF8]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/id-avatar.webp" alt="Raj Ganesh" className="h-full w-full object-cover object-[50%_8%]" />
+              <img src="/images/avatar.png" alt="Raj Ganesh" className="h-full w-full object-cover object-center" />
             </span>
             Raj Ganesh
           </a>

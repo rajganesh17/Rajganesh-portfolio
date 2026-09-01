@@ -81,7 +81,10 @@ export default function Navbar() {
           href={homeHref}
           className={`justify-self-start flex items-center gap-3 text-[20px] font-bold tracking-[-0.01em] text-ink-soft transition-all duration-300 ${sideHidden}`}
         >
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-ink" />
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-[#FFFDF8]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/avatar.png" alt="Raj Ganesh" className="h-full w-full object-cover object-center" />
+          </span>
           Raj Ganesh
         </a>
 
