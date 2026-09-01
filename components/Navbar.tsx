@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { label: "Home", href: "#top" },
-  { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
+  { label: "Work", href: "#capabilities" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -13,6 +13,21 @@ const ACTIVE_INDEX = 0; // Home is the active/resting item
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  // Once the page is scrolled, collapse the header down to just the pill nav.
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Hide the side elements (avatar/name + action buttons) while keeping the
+  // centered pill in place. The 1fr/auto/1fr grid keeps the pill centered.
+  const sideHidden = scrolled
+    ? "opacity-0 -translate-y-1 pointer-events-none"
+    : "opacity-100 translate-y-0";
 
   // sliding pill state
   const navRef = useRef<HTMLElement>(null);
@@ -54,7 +69,7 @@ export default function Navbar() {
         {/* Left: avatar + name */}
         <a
           href="#top"
-          className="justify-self-start flex items-center gap-3 text-[20px] font-bold tracking-[-0.01em] text-ink-soft"
+          className={`justify-self-start flex items-center gap-3 text-[20px] font-bold tracking-[-0.01em] text-ink-soft transition-all duration-300 ${sideHidden}`}
         >
           <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-ink" />
           Raj Ganesh
@@ -107,7 +122,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right: actions (desktop) */}
-        <div className="hidden items-center gap-2.5 lg:flex lg:justify-self-end">
+        <div className={`hidden items-center gap-2.5 transition-all duration-300 lg:flex lg:justify-self-end ${sideHidden}`}>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-2xl bg-[#111] px-5 py-[13px] text-[15px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors hover:bg-black"
