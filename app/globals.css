@@ -23,6 +23,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset so anchored sections aren't hidden behind the sticky navbar. */
+  scroll-padding-top: 96px;
 }
 
 body {

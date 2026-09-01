@@ -1,6 +1,7 @@
 const EMAIL = "rajganesh6.1@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/rajganesh1710/";
-const RESUME = "/resume.pdf"; // drop your resume in /public as resume.pdf
+const RESUME = "https://docs.google.com/document/d/1_EVCKzGhZrRP9tXemsY-6UN51bzxWiUv/edit?usp=sharing&ouid=104141178592982352029&rtpof=true&sd=true";
+const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`;
 
 // Full-colour Gmail mark.
 function GmailIcon() {
@@ -89,7 +90,7 @@ export default function Footer() {
 
         {/* Write to me */}
         <div className={`${CARD_WRAP} sm:z-[2] sm:-mr-6 sm:translate-y-[6px] sm:-rotate-[2.5deg]`}>
-          <a href={`mailto:${EMAIL}`} className={CARD_SHELL}>
+          <a href={GMAIL_COMPOSE} target="_blank" rel="noopener noreferrer" className={CARD_SHELL}>
             <div className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#B4B0A6]">Gmail</div>
             <div className="flex flex-1 items-center justify-center py-6">
               <span className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-[1.12]">
@@ -145,7 +146,7 @@ export default function Footer() {
       {/* ── Email ── */}
       <a
         href={`mailto:${EMAIL}`}
-        className="mt-4 block break-all text-center font-sans text-[clamp(28px,7.5vw,72px)] font-bold leading-[1.08] tracking-[-0.005em] text-ink"
+        className="mt-4 block break-words text-center font-sans text-[clamp(20px,4.5vw,48px)] font-bold leading-[1.08] tracking-[-0.005em] text-ink"
       >
         rajganesh6.1<span className="text-blue">@gmail.com</span>
       </a>

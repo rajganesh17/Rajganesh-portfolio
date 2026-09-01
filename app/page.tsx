@@ -13,7 +13,7 @@ export default function Home() {
       <Reveal>
         <Hero />
       </Reveal>
-      <Reveal>
+      <Reveal className="hidden sm:block">
         <About />
       </Reveal>
       <Reveal>

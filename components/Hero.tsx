@@ -39,9 +39,9 @@ const CARDS = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative pt-1.5 pb-0">
+    <section id="top" className="relative pt-1.5 pb-6 sm:pb-0">
       <div
-        className="relative overflow-hidden rounded-[40px] border border-line bg-card px-7 pt-[60px] sm:px-14"
+        className="relative overflow-hidden rounded-[40px] border border-line bg-card px-7 pt-[60px] pb-12 sm:px-14 sm:pb-0"
         style={{
           backgroundImage:
             "radial-gradient(rgba(2,89,78,0.06) 1.2px, transparent 1.2px)",

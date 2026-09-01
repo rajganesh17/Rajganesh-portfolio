@@ -52,7 +52,7 @@ export default function AboutTypewriter({
   }, []);
 
   return (
-    <section className="mx-auto min-h-[420px] max-w-[860px] px-2 pb-24 pt-20">
+    <section className="mx-auto min-h-[420px] max-w-[860px] px-2 pb-24 pt-7 sm:pt-20">
       <div className="mb-6 font-mono text-[13px] uppercase tracking-[0.18em] text-faint">
         About
       </div>

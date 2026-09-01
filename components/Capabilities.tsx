@@ -23,7 +23,7 @@ export default function Capabilities() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-2">
         {/* Customization — tall card, left */}
         <article
-          className="group/cap relative flex min-h-[560px] flex-col overflow-hidden rounded-[32px] p-9 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-5 md:row-span-2"
+          className="group/cap relative flex min-h-[480px] flex-col overflow-hidden rounded-[32px] p-6 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] sm:min-h-[560px] sm:p-9 md:col-span-5 md:row-span-2"
           style={{ background: LAVENDER }}
         >
           <div
@@ -35,39 +35,38 @@ export default function Capabilities() {
           </h3>
 
           {/* Layered document + JSON output */}
-          <div className="relative mt-8 flex flex-1 items-center justify-center">
+          <div className="relative mt-6 flex flex-1 items-center justify-center gap-2 sm:mt-8 sm:gap-0">
             {/* Source document — front card, left */}
             <div
-              className="relative z-[2] w-[176px] flex-none rounded-[16px] bg-white p-4 shadow-[0_18px_44px_-16px_rgba(16,24,40,0.3)]"
-              style={{ transform: "rotate(-5deg)" }}
+              className="relative z-[2] w-[100px] flex-none -rotate-[3deg] rounded-[16px] bg-white p-3 shadow-[0_18px_44px_-16px_rgba(16,24,40,0.3)] sm:w-[176px] sm:-rotate-[5deg] sm:p-4"
             >
-              <div className="h-5 w-2/5 rounded-[5px] border border-[#F1A9A9] bg-[#FDECEC]" />
-              <div className="mt-3 space-y-1.5">
+              <div className="h-3.5 w-2/5 rounded-[5px] border border-[#F1A9A9] bg-[#FDECEC] sm:h-5" />
+              <div className="mt-2 space-y-1 sm:mt-3 sm:space-y-1.5">
                 <div className="h-1.5 w-4/5 rounded-full bg-[#EAE7F0]" />
                 <div className="h-1.5 w-3/5 rounded-full bg-[#EAE7F0]" />
               </div>
-              <div className="mt-3 ml-auto h-5 w-1/2 rounded-[5px] border border-[#A9C0F4] bg-[#EEF3FE]" />
-              <div className="mt-3 space-y-1.5">
+              <div className="mt-2 ml-auto h-3.5 w-1/2 rounded-[5px] border border-[#A9C0F4] bg-[#EEF3FE] sm:mt-3 sm:h-5" />
+              <div className="mt-2 space-y-1 sm:mt-3 sm:space-y-1.5">
                 <div className="h-1.5 w-2/5 rounded-full bg-[#EAE7F0]" />
                 <div className="h-1.5 w-3/5 rounded-full bg-[#EAE7F0]" />
               </div>
-              <div className="mt-3 h-5 w-1/2 rounded-[5px] border border-[#A9D9C0] bg-[#EAF6F0]" />
-              <div className="mt-3 h-5 w-1/2 rounded-[5px] border border-[#F0D6A0] bg-[#FBF3E3]" />
+              <div className="mt-2 h-3.5 w-1/2 rounded-[5px] border border-[#A9D9C0] bg-[#EAF6F0] sm:mt-3 sm:h-5" />
+              <div className="mt-2 h-3.5 w-1/2 rounded-[5px] border border-[#F0D6A0] bg-[#FBF3E3] sm:mt-3 sm:h-5" />
             </div>
 
             {/* JSON panel — back card, right, peeking */}
-            <div className="relative z-[1] -ml-14 w-[272px] flex-none overflow-hidden rounded-[16px] bg-[#0E1117] shadow-[0_26px_54px_-18px_rgba(16,24,40,0.6)]">
-              <div className="flex items-center gap-2 border-b border-white/10 px-3.5 py-2.5">
+            <div className="relative z-[1] w-[150px] flex-none overflow-hidden rounded-[16px] bg-[#0E1117] shadow-[0_26px_54px_-18px_rgba(16,24,40,0.6)] sm:-ml-14 sm:w-[272px]">
+              <div className="flex items-center gap-2 border-b border-white/10 px-3 py-2 sm:px-3.5 sm:py-2.5">
                 <span className="flex gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-[#FF5F56]" />
-                  <span className="h-2 w-2 rounded-full bg-[#FFBD2E]" />
-                  <span className="h-2 w-2 rounded-full bg-[#27C93F]" />
+                  <span className="h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 bg-[#FF5F56]" />
+                  <span className="h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 bg-[#FFBD2E]" />
+                  <span className="h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 bg-[#27C93F]" />
                 </span>
-                <span className="truncate font-mono text-[9.5px] text-white/55">
+                <span className="truncate font-mono text-[7.5px] text-white/55 sm:text-[9.5px]">
                   converted-json-with-bboxes.json
                 </span>
               </div>
-              <div className="whitespace-pre px-3.5 py-3 font-mono text-[10.5px] leading-[1.65] text-[#8B949E]">
+              <div className="whitespace-pre px-3 py-2.5 font-mono text-[7.5px] leading-[1.6] text-[#8B949E] sm:px-3.5 sm:py-3 sm:text-[10.5px] sm:leading-[1.65]">
                 <div>{"{"}</div>
                 <div>{"  "}<span className="text-[#79C0FF]">"label"</span>{": "}<span className="text-[#7EE787]">"Total amount"</span>{","}</div>
                 <div>{"  "}<span className="text-[#79C0FF]">"value"</span>{": "}<span className="text-[#7EE787]">"$12,480.00"</span>{","}</div>
@@ -119,7 +118,7 @@ export default function Capabilities() {
           <img
             src="/images/scheduling-onboarding.png"
             alt="Scheduling — pick a delivery date"
-            className="pointer-events-none absolute right-2 top-1/2 hidden h-[90%] w-auto max-w-[62%] -translate-y-1/2 select-none object-contain object-right lg:block"
+            className="pointer-events-none mx-auto mt-6 block w-full max-w-[280px] select-none object-contain lg:absolute lg:right-2 lg:top-1/2 lg:mx-0 lg:mt-0 lg:h-[90%] lg:w-auto lg:max-w-[62%] lg:-translate-y-1/2 lg:object-right"
           />
         </article>
 

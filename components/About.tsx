@@ -11,10 +11,10 @@ const collageSvg = readFileSync(
 
 export default function About() {
   return (
-    <section id="about" className="pt-0 pb-11">
+    <section id="about" className="pt-0 pb-3 sm:pb-11">
       <div
-        className="relative w-full"
-        style={{ aspectRatio: "1230 / 650", containerType: "inline-size", marginLeft: "16px" }}
+        className="relative -mx-4 w-auto sm:mx-0 sm:ml-4 sm:w-full"
+        style={{ aspectRatio: "1230 / 650", containerType: "inline-size" }}
       >
         <div
           className="absolute inset-0 [&>svg]:block [&>svg]:h-full [&>svg]:w-full [&_svg]:overflow-visible"

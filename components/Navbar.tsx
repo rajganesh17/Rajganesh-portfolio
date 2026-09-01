@@ -152,8 +152,8 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="grid h-12 w-12 place-items-center rounded-2xl bg-[#111] text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors hover:bg-black"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H16.4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H10z" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.94 5.5a2 2 0 1 1-4.001-.001A2 2 0 0 1 6.94 5.5zM7 8.98H3V21h4V8.98zm6.32 0H9.35V21h3.96v-6.31c0-3.69 4.8-3.99 4.8 0V21H22v-7.68c0-6.19-7.08-5.96-8.75-2.92l.07-1.42z" />
             </svg>
           </a>
         </div>
@@ -213,8 +213,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="grid h-12 w-12 place-items-center rounded-2xl bg-[#111] text-white"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H16.4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H10z" />
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.94 5.5a2 2 0 1 1-4.001-.001A2 2 0 0 1 6.94 5.5zM7 8.98H3V21h4V8.98zm6.32 0H9.35V21h3.96v-6.31c0-3.69 4.8-3.99 4.8 0V21H22v-7.68c0-6.19-7.08-5.96-8.75-2.92l.07-1.42z" />
               </svg>
             </a>
           </div>
