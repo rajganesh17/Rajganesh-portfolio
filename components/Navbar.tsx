@@ -1,17 +1,27 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-const NAV_LINKS = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#capabilities" },
-  { label: "Contact", href: "#contact" },
-];
-
-const ACTIVE_INDEX = 0; // Home is the active/resting item
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const onHome = pathname === "/";
+
+  // Links are route-aware: on the home page they scroll to sections; from any
+  // other route (e.g. /about) they jump back to the home page's sections.
+  const NAV_LINKS = [
+    { label: "Home", href: onHome ? "#top" : "/" },
+    { label: "About", href: "/about" },
+    { label: "Work", href: onHome ? "#capabilities" : "/#capabilities" },
+    { label: "Contact", href: onHome ? "#contact" : "/#contact" },
+  ];
+
+  // Home rests active on the home page; About rests active on /about.
+  const ACTIVE_INDEX = pathname === "/about" ? 1 : 0;
+
+  const homeHref = onHome ? "#top" : "/";
+  const contactHref = onHome ? "#contact" : "/#contact";
+
   const [open, setOpen] = useState(false);
 
   // Once the page is scrolled, collapse the header down to just the pill nav.
@@ -68,7 +78,7 @@ export default function Navbar() {
       <div className="grid grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
         {/* Left: avatar + name */}
         <a
-          href="#top"
+          href={homeHref}
           className={`justify-self-start flex items-center gap-3 text-[20px] font-bold tracking-[-0.01em] text-ink-soft transition-all duration-300 ${sideHidden}`}
         >
           <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-line-soft bg-ink" />
@@ -124,7 +134,7 @@ export default function Navbar() {
         {/* Right: actions (desktop) */}
         <div className={`hidden items-center gap-2.5 transition-all duration-300 lg:flex lg:justify-self-end ${sideHidden}`}>
           <a
-            href="#contact"
+            href={contactHref}
             className="inline-flex items-center gap-2 rounded-2xl bg-[#111] px-5 py-[13px] text-[15px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors hover:bg-black"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -184,7 +194,7 @@ export default function Navbar() {
           </div>
           <div className="mt-2 flex items-center gap-2.5 border-t border-line-soft pt-3">
             <a
-              href="#contact"
+              href={contactHref}
               onClick={() => setOpen(false)}
               className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#111] px-5 py-3 text-[15px] font-semibold text-white"
             >

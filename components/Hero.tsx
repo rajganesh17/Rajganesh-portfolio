@@ -23,7 +23,7 @@ const CARDS = [
     title: "About me",
     body: "Product designer and builder shipping AI copilots for finance teams. Founding-designer instincts, 20+ side projects, always learning by building.",
     cta: "More about me",
-    href: "#about",
+    href: "/about",
   },
   {
     key: "contact",
