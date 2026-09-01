@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Self-hosted Acorn (single Regular master; heavier weights are synthesized,
+   matching the locally-installed font). Loads for all visitors. */
+@font-face {
+  font-family: "Acorn";
+  src: url("/fonts/acorn.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-acorn: "Acorn", "Georgia", serif;
   --font-nata-sans: "Nata Sans", "Inter", system-ui, sans-serif;
