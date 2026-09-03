@@ -77,14 +77,14 @@ export default function Footer() {
             <div className="mt-3.5 flex flex-col gap-2">
               <p className="text-[13.5px] font-semibold leading-[1.4] text-ink">Dear future collaborator,</p>
               <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">
-                I like building small, useful things with good people. The kind of products that have a little bit of magic in them.
+                I&rsquo;m a product designer who turns messy problems into simple, useful products, and I like getting involved beyond the screen.
               </p>
               <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">
-                I&rsquo;ll happily wear a few hats to ship the best version. Not just a designer, but a creator :)
+                I enjoy working with good people and building things that genuinely matter.
               </p>
-              <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">If that sounds like your team, let&rsquo;s talk.</p>
+              <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">If you&rsquo;re working on something interesting, let&rsquo;s talk.</p>
             </div>
-            <div className="mt-4 text-[14px] text-[#B4B0A6]">— Raj</div>
+            <div className="mt-4 text-[14px] text-[#B4B0A6]">- Raj</div>
           </article>
         </div>
 
