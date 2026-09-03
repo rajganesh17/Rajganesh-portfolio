@@ -85,12 +85,12 @@ export default function Community() {
       {/* Section heading */}
       <div className="mb-8 max-w-[720px]">
         <h2 className="m-0 font-display text-[clamp(32px,4.5vw,56px)] font-medium leading-[1.03] tracking-[-0.02em] text-ink">
-          Out in the <span className="text-blue">design community</span>
+          Beyond the screen, <span className="text-blue">into the community</span>
         </h2>
         <p className="mt-5 max-w-[520px] text-[clamp(16px,1.9vw,19px)] leading-[1.55] text-body">
-          I show up for design &amp; product meetups, jams, and conferences —
-          trading notes with the community to stay close to fresh thinking and
-          the trends shaping what we build next.
+          Some of my best thinking happens away from the desk. At meetups,
+          jams, and talks, I swap ideas with people who genuinely care about the
+          craft.
         </p>
       </div>
 

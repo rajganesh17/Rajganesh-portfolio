@@ -7,9 +7,9 @@ const CARDS = [
     gradient: "linear-gradient(150deg,#FCEBD6 0%,#F6C39A 52%,#EBA9C6 100%)",
     rot: "sm:-rotate-[5deg]",
     z: "z-[2]",
-    title: "Recent work",
-    body: "See how I turn messy, data-heavy product problems into shipped experiences.",
-    cta: "Read case studies",
+    title: "My Craft",
+    body: "The products I've shipped, the tangled problems behind each one, and the calls I made to untangle them.",
+    cta: "Explore my work",
     href: "#capabilities",
   },
   {
@@ -20,9 +20,9 @@ const CARDS = [
     gradient: "linear-gradient(150deg,#EAE3FF 0%,#C4BAFF 50%,#A4C7FF 100%)",
     rot: "sm:rotate-[4deg]",
     z: "z-[3]",
-    title: "About me",
-    body: "Product designer and builder shipping AI copilots for finance teams. Founding-designer instincts, 20+ side projects, always learning by building.",
-    cta: "More about me",
+    title: "The Path",
+    body: "How I found my way into design, and the people, detours, and hard lessons that made me the designer I am.",
+    cta: "Read my story",
     href: "/about",
   },
   {
@@ -30,8 +30,8 @@ const CARDS = [
     gradient: "linear-gradient(150deg,#CFF0E2 0%,#ABDAF1 54%,#C9C5F3 100%)",
     rot: "sm:-rotate-[3deg]",
     z: "z-[1]",
-    title: "Let's talk",
-    body: "Open to collaborating, mentoring, or just trading ideas. Tell me what you're building — I'll write back.",
+    title: "What's Next",
+    body: "Building something interesting, or just want to trade ideas? Tell me what you're working on and let's see where it goes.",
     cta: "Get in touch",
     href: "#contact",
   },
@@ -53,16 +53,16 @@ export default function Hero() {
           <h1 className="m-0 mb-6 font-display text-[clamp(42px,6vw,80px)] font-medium leading-[1.02] tracking-[-0.02em]">
             <span className="text-ink">Hi, I&apos;m Raj.</span>
             <br />
-            <span className="text-blue">Product Designer &amp; Builder.</span>
+            <span className="text-blue">I design &amp; build ideas.</span>
           </h1>
           <p className="m-0 max-w-[680px] text-[clamp(18px,2vw,24px)] leading-[1.55] text-body">
-            Senior Product Designer with a data &amp; engineering background.
-            Designing 0&rarr;1 AI &amp; fintech at{" "}
+            Senior Product Designer with 5+ years across AI, fintech &amp; B2B
+            SaaS. At{" "}
             <span className="inline-flex items-center gap-1.5 rounded-full border border-line-soft bg-white py-1 pl-2 pr-3.5 align-middle text-[0.82em] font-semibold text-body">
               <img src="/images/numero.svg" alt="Numero" width={20} height={20} className="rounded-[6px]" />
               Numero
-            </span>{" "}
-            by day, building side projects by night.
+            </span>
+            , I designed 0 to 1 products and simplified complex workflows.
           </p>
         </div>
 

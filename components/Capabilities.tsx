@@ -13,8 +13,8 @@ export default function Capabilities() {
       {/* Section heading */}
       <div className="mb-8 max-w-[760px]">
         <h2 className="m-0 font-display text-[clamp(32px,4.5vw,56px)] font-medium leading-[1.03] tracking-[-0.02em] text-ink">
-          Turning a forgotten text into a{" "}
-          <span className="text-blue">moment worth keeping</span>
+          Turning complex problems into{" "}
+          <span className="text-blue">products that feel simple</span>
         </h2>
       </div>
 
@@ -31,7 +31,7 @@ export default function Capabilities() {
             style={{ background: SHEEN }}
           />
           <h3 className="relative m-0 font-display text-[40px] font-medium leading-none text-body">
-            Extraction
+            Field Mapping
           </h3>
 
           {/* Layered document + JSON output */}
@@ -90,8 +90,8 @@ export default function Capabilities() {
           </div>
 
           <p className="relative m-0 max-w-[360px] text-[19px] font-medium leading-[1.4] text-body">
-            Every extracted value returns as JSON with its source page and
-            coordinates
+            Name a field, and AI returns the value with its exact page and
+            coordinates.
           </p>
         </article>
 
@@ -106,11 +106,10 @@ export default function Capabilities() {
           />
           <div className="relative max-w-[300px] lg:max-w-[210px]">
             <h3 className="m-0 font-display text-[38px] font-medium leading-none text-body">
-              Scheduling
+              Onboarding
             </h3>
             <p className="mt-4 text-[19px] font-medium leading-[1.4] text-body">
-              Schedule all your cards and gifts now and we&rsquo;ll send them
-              later
+              Add a new hire, and let AI plan and schedule onboarding.
             </p>
           </div>
 
@@ -162,10 +161,10 @@ export default function Capabilities() {
 
           <div className="relative mt-6">
             <h3 className="m-0 font-display text-[30px] font-medium leading-none text-body">
-              Wallet
+              AI Writer
             </h3>
             <p className="mt-3 text-[15px] font-medium leading-[1.4] text-body">
-              Access all your gifts and save up your Givingli Cash
+              Make complex finance docs clear and consistent.
             </p>
           </div>
         </article>

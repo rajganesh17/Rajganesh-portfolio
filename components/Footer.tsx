@@ -77,12 +77,12 @@ export default function Footer() {
             <div className="mt-3.5 flex flex-col gap-2">
               <p className="text-[13.5px] font-semibold leading-[1.4] text-ink">Dear future collaborator,</p>
               <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">
-                I build small, useful things with good people — products with a little bit of magic.
+                I like building small, useful things with good people. The kind of products that have a little bit of magic in them.
               </p>
               <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">
-                Happy to wear a few hats to ship the best version. Not just a &ldquo;designer&rdquo; — a creator :)
+                I&rsquo;ll happily wear a few hats to ship the best version. Not just a designer, but a creator :)
               </p>
-              <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">If that feels like your team, let&rsquo;s chat.</p>
+              <p className="text-[12.5px] leading-[1.5] text-[#4C4C46]">If that sounds like your team, let&rsquo;s talk.</p>
             </div>
             <div className="mt-4 text-[14px] text-[#B4B0A6]">— Raj</div>
           </article>
@@ -153,8 +153,8 @@ export default function Footer() {
 
       {/* subtext */}
       <p className="mx-auto mt-10 max-w-[560px] text-center text-[17px] leading-relaxed text-[#8A867C]">
-        Let&rsquo;s turn your idea into something real — 0&nbsp;→&nbsp;1 AI &amp; fintech, side
-        projects, or just trading notes. I&rsquo;ll write back.
+        Have a role, a product, or a problem worth solving? Send it over. I read
+        and reply to every message.
       </p>
 
       {/* ── Baseline bar ── */}
