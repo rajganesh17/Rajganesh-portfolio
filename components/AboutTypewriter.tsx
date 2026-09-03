@@ -5,9 +5,14 @@ import { useEffect, useRef, useState } from "react";
 // yevtam.com-style typewriter: the narrative types itself out, character by
 // character, with a blinking caret. Copy is drawn from Raj's bio.
 const PARAGRAPHS = [
-  "I'm Raj — a Senior Product Designer with roots in data and engineering.",
-  "By day I design 0→1 AI and fintech products at Katalyst Labs. By night I build side projects — 20+ and counting.",
-  "I think, then I build: research, prototype, argue about trade-offs, and ship. Not just a designer — a builder who happens to design.",
+  "It started with making things.",
+  "Back in college, I was the Creative Director at my Rotaract Club and a Department Editor. I didn't know it at the time, but those experiences were slowly pulling me toward design - creating things, working with people, and figuring out how to communicate an idea clearly.",
+  "That eventually led me to Katalyst Labs, where I started my product design career.",
+  "My first big opportunity was Dataflo, where I worked on a product from 0 to 1. I wasn't just designing screens. I worked across the product, website, and design assets, and got to see how an idea slowly turns into something real.",
+  "Then came Numero, where I started working on AI and finance products. The problems were more complex, the workflows were deeper, and the decisions mattered more. It pushed me to think beyond how something looks and focus more on why it should work that way.",
+  "Today, I'm a Senior Product Designer with 5+ years of experience across AI, fintech, and B2B SaaS.",
+  "I still enjoy the same thing I did back then: taking an idea, making sense of it, and turning it into something useful.",
+  "That's probably what keeps me designing.",
 ];
 
 const FULL = PARAGRAPHS.join("\n\n");
