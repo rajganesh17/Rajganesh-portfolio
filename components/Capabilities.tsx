@@ -96,8 +96,11 @@ export default function Capabilities() {
         </article>
 
         {/* Scheduling — wide card, top-right */}
-        <article
-          className="group/cap relative flex min-h-[280px] flex-col justify-center overflow-hidden rounded-[32px] p-9 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-7"
+        <a
+          href="https://www.figma.com/proto/CNjmDPWImUb1fo6rvknEfW/Joinly?node-id=164-1155&p=f&t=zl3JJrBWgmAnmJJ9-0&scaling=min-zoom&content-scaling=fixed&page-id=164%3A1154"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/cap relative flex min-h-[280px] cursor-pointer flex-col justify-center overflow-hidden rounded-[32px] p-9 no-underline transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-7"
           style={{ background: PEACH }}
         >
           <div
@@ -119,11 +122,14 @@ export default function Capabilities() {
             alt="Scheduling — pick a delivery date"
             className="pointer-events-none mx-auto mt-6 block w-full max-w-[280px] select-none object-contain lg:absolute lg:right-2 lg:top-1/2 lg:mx-0 lg:mt-0 lg:h-[90%] lg:w-auto lg:max-w-[62%] lg:-translate-y-1/2 lg:object-right"
           />
-        </article>
+        </a>
 
         {/* Wallet — bottom-left of right column */}
-        <article
-          className="group/cap relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-[32px] p-8 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-3"
+        <a
+          href="https://www.figma.com/proto/DbI7DPW6qPxW4v1sKBRgho/Knowledge-base-writer?node-id=0-5&p=f&t=S0zNQcnQEWzSpdMl-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/cap relative flex min-h-[260px] cursor-pointer flex-col justify-between overflow-hidden rounded-[32px] p-8 no-underline transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-3"
           style={{ background: MINT }}
         >
           <div
@@ -167,11 +173,14 @@ export default function Capabilities() {
               Make complex finance docs clear and consistent.
             </p>
           </div>
-        </article>
+        </a>
 
         {/* Inbox — bottom-right */}
-        <article
-          className="group/cap relative flex min-h-[260px] flex-col overflow-hidden rounded-[32px] p-8 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-4"
+        <a
+          href="https://www.figma.com/proto/klBOpAgpp6bCU28sxGDIBs/Finance-case-Study?node-id=17-231&t=l4VlmAce72xBikj4-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/cap relative flex min-h-[260px] cursor-pointer flex-col overflow-hidden rounded-[32px] p-8 no-underline transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] md:col-span-4"
           style={{ background: BUTTER }}
         >
           <div
@@ -253,7 +262,7 @@ export default function Capabilities() {
               </div>
             </div>
           </div>
-        </article>
+        </a>
       </div>
     </section>
   );
