@@ -20,7 +20,8 @@ export default function Navbar() {
   const ACTIVE_INDEX = pathname === "/about" ? 1 : 0;
 
   const homeHref = onHome ? "#top" : "/";
-  const contactHref = onHome ? "#contact" : "/#contact";
+  const mailHref =
+    "https://mail.google.com/mail/?view=cm&fs=1&to=rajganesh6.1@gmail.com";
 
   const [open, setOpen] = useState(false);
 
@@ -137,7 +138,9 @@ export default function Navbar() {
         {/* Right: actions (desktop) */}
         <div className={`hidden items-center gap-2.5 transition-all duration-300 lg:flex lg:justify-self-end ${sideHidden}`}>
           <a
-            href={contactHref}
+            href={mailHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-2xl bg-[#111] px-5 py-[13px] text-[15px] font-semibold text-white shadow-[0_2px_8px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors hover:bg-black"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -197,7 +200,9 @@ export default function Navbar() {
           </div>
           <div className="mt-2 flex items-center gap-2.5 border-t border-line-soft pt-3">
             <a
-              href={contactHref}
+              href={mailHref}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#111] px-5 py-3 text-[15px] font-semibold text-white"
             >
