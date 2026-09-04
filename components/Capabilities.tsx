@@ -22,8 +22,11 @@ export default function Capabilities() {
           Wallet + Inbox (bottom-right) — mirrors the reference layout. */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-2">
         {/* Customization — tall card, left */}
-        <article
-          className="group/cap relative flex min-h-[480px] flex-col overflow-hidden rounded-[32px] p-6 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] sm:min-h-[560px] sm:p-9 md:col-span-5 md:row-span-2"
+        <a
+          href="/case-studies/doculens.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/cap relative flex min-h-[480px] cursor-pointer flex-col overflow-hidden rounded-[32px] p-6 no-underline transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_40px_72px_-34px_rgba(16,24,40,0.4)] sm:min-h-[560px] sm:p-9 md:col-span-5 md:row-span-2"
           style={{ background: LAVENDER }}
         >
           <div
@@ -93,7 +96,7 @@ export default function Capabilities() {
             Name a field, and AI returns the value with its exact page and
             coordinates.
           </p>
-        </article>
+        </a>
 
         {/* Scheduling — wide card, top-right */}
         <a
