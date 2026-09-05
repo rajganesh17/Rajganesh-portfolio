@@ -67,12 +67,12 @@ export default function Hero() {
         </div>
 
         {/* Sticky card row with woven-in portrait */}
-        <div className="group/deck relative mt-10 flex flex-col items-center gap-5 sm:mt-14 sm:flex-row sm:flex-wrap sm:items-start sm:justify-center sm:gap-0">
+        <div className="relative mt-10 flex flex-col items-center gap-5 sm:mt-14 sm:flex-row sm:flex-wrap sm:items-start sm:justify-center sm:gap-0">
           {CARDS.map((card) =>
             card.key === "portrait" ? (
               <div
                 key="portrait"
-                className="relative z-[4] h-[300px] w-full max-w-[340px] flex-none overflow-hidden rounded-[24px] transition-opacity duration-300 sm:mt-6 sm:h-[360px] sm:w-[210px] sm:-mx-3.5 sm:-rotate-1 group-hover/deck:opacity-40 hover:!opacity-100"
+                className="relative z-[4] h-[300px] w-full max-w-[340px] flex-none overflow-hidden rounded-[24px] sm:mt-6 sm:h-[360px] sm:w-[210px] sm:-mx-3.5 sm:-rotate-1"
                 style={{
                   boxShadow:
                     "0 0 0 1px rgba(0,0,0,0.05), 0 10px 30px -8px rgba(16,24,40,0.25)",
@@ -88,12 +88,12 @@ export default function Hero() {
                 />
               </div>
             ) : (
-              // Wrapper handles stacking and the sibling fade; the inner shell
-              // carries the fan angle and the hover motion, so straightening,
-              // lifting and scaling all compose in one transform.
+              // Wrapper handles stacking; the inner shell carries the fan
+              // angle and the hover motion, so straightening, lifting and
+              // scaling all compose in one transform.
               <div
                 key={card.key}
-                className={`group/card relative flex w-full max-w-[340px] transition-opacity duration-300 hover:z-30 sm:-mx-3.5 sm:flex-1 sm:basis-[240px] group-hover/deck:opacity-40 hover:!opacity-100 ${card.z}`}
+                className={`group/card relative flex w-full max-w-[340px] hover:z-30 sm:-mx-3.5 sm:flex-1 sm:basis-[240px] ${card.z}`}
               >
                 <div
                   className={`relative flex min-h-[220px] w-full flex-col justify-between gap-6 overflow-hidden rounded-[24px] px-6 pb-7 pt-7 shadow-[0_0_0_1px_rgba(0,0,0,0.05),0_4px_16px_0_rgba(16,24,40,0.08)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform sm:min-h-[360px] sm:gap-0 sm:px-[30px] sm:pb-10 sm:pt-8 group-hover/card:rotate-0 group-hover/card:-translate-y-[18px] group-hover/card:scale-[1.06] group-hover/card:shadow-[0_0_0_1px_rgba(0,0,0,0.05),0_44px_72px_-34px_rgba(16,24,40,0.45)] ${card.rot}`}

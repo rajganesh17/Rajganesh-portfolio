@@ -52,9 +52,9 @@ function DocumentIcon() {
 // shadow that composes cleanly with the wrapper's rotation instead of fighting
 // it, so nothing jumps.
 const CARD_WRAP =
-  "group relative w-full max-w-[300px] transition-[transform,opacity] duration-300 " +
-  "ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-30 group-hover/deck:opacity-40 " +
-  "hover:!opacity-100 sm:h-[356px] sm:w-[262px] sm:max-w-none sm:hover:rotate-0";
+  "group relative w-full max-w-[300px] transition-transform duration-300 " +
+  "ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-30 " +
+  "sm:h-[356px] sm:w-[262px] sm:max-w-none sm:hover:rotate-0";
 const CARD_SHELL =
   "flex h-full w-full flex-col rounded-[28px] border border-line-soft bg-white p-7 " +
   "shadow-[0_18px_44px_-32px_rgba(16,24,40,0.28)] transition-[transform,box-shadow] " +
@@ -69,7 +69,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="pb-12 pt-6">
       {/* ── Fanned cards ── */}
-      <div className="group/deck flex flex-col items-center gap-5 sm:h-[400px] sm:flex-row sm:items-start sm:justify-center sm:gap-0">
+      <div className="flex flex-col items-center gap-5 sm:h-[400px] sm:flex-row sm:items-start sm:justify-center sm:gap-0">
         {/* Note */}
         <div className={`${CARD_WRAP} sm:-mr-6 sm:translate-y-[22px] sm:-rotate-[7deg]`}>
           <article className={CARD_SHELL}>

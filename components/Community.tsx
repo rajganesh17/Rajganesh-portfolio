@@ -88,9 +88,9 @@ export default function Community() {
           Beyond the screen, <span className="text-blue">into the community</span>
         </h2>
         <p className="mt-5 max-w-[520px] text-[clamp(16px,1.9vw,19px)] leading-[1.55] text-body">
-          Some of my best thinking happens away from the desk. At meetups,
-          jams, and talks, I swap ideas with people who genuinely care about the
-          craft.
+          Some of my best design lessons have come from people, not screens.
+          I go to meetups, jams, and talks to exchange ideas, hear different
+          perspectives, and keep learning from people who do the work.
         </p>
       </div>
 
