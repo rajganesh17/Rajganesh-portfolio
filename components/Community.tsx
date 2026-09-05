@@ -87,7 +87,7 @@ export default function Community() {
         <h2 className="m-0 font-display text-[clamp(32px,4.5vw,56px)] font-medium leading-[1.03] tracking-[-0.02em] text-ink">
           Beyond the screen, <span className="text-blue">into the community</span>
         </h2>
-        <p className="mt-5 max-w-[520px] text-[clamp(16px,1.9vw,19px)] leading-[1.55] text-body">
+        <p className="mt-5 max-w-[720px] text-balance text-[clamp(16px,1.9vw,19px)] leading-[1.55] text-body">
           Some of my best design lessons have come from people, not screens.
           I go to meetups, jams, and talks to exchange ideas, hear different
           perspectives, and keep learning from people who do the work.
